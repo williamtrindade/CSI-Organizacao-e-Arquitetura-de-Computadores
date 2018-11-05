@@ -18,7 +18,11 @@ JMP start
 	.i: DB 0
 
 start:
-	MOV A, .i
-	MOV B
+	JMP for
+		for:
+			MOV A, .i
+			CMP A, 4
+			JA fimfor
 
-inifor
+
+		fimfor:
