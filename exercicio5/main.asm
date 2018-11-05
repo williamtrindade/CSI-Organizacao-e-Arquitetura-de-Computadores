@@ -12,17 +12,21 @@ JMP start
             DB 4
 
 	.b: DB 5
-
 	.x: DB 0
-	
 	.i: DB 0
 
 start:
 	JMP for
-		for:
-			MOV A, .i
+		for:	
+			MOV A, .a
+			MOV B, .x
+			MOV C, .i
+			
+			
+			INC A
 			CMP A, 4
-			JA fimfor
+			JAE fimfor
 
 
 		fimfor:
+			hlt
